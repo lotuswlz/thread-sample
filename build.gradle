@@ -32,12 +32,14 @@ dependencyManagement {
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
-    api "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
-//    api 'org.springframework.boot:spring-boot-starter-logging:1.5.9.RELEASE'
+    compile 'org.apache.commons:commons-math3:3.6.1'
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-logging:$springBootVersion"
+    compile 'org.springframework:spring-core'
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:23.0'
+    compile 'com.google.guava:guava:23.0'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
